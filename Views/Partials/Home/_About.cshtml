@@ -1,0 +1,23 @@
+﻿@inherits UmbracoTemplatePage
+@{
+    var imageId = @Umbraco.AssignedContentItem.GetPropertyValue("image").ToString();
+    var mediaItem = Umbraco.TypedMedia(Convert.ToInt32(imageId));
+    var url = mediaItem.Url;
+    }
+}
+<div id="about">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-md-6"><img class="about-img" src="@url" /></div>
+            <div class="col-xs-12 col-md-3 col-md-offset-1">
+                <div class="about-text">
+                    <div class="section-title">
+                        <h2>Our Story</h2>
+                    </div>
+                    <p>@Umbraco.AssignedContentItem.GetPropertyValue("aboutText")</p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

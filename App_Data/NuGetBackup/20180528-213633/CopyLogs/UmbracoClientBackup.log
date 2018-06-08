@@ -1,0 +1,26 @@
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows                              
+-------------------------------------------------------------------------------
+
+  Started : 28. maj 2018 21:36:44
+   Source : F:\Code Projects\KaspersBurger\KaspersBurger\Umbraco_Client\
+     Dest : F:\Code Projects\KaspersBurger\KaspersBurger\App_Data\NuGetBackup\20180528-213633\Umbraco_Client\
+
+    Files : *.*
+	    
+  Options : *.* /S /E /DCOPY:DA /COPY:DAT /R:1000000 /W:30 
+
+------------------------------------------------------------------------------
+
+	                   0	F:\Code Projects\KaspersBurger\KaspersBurger\Umbraco_Client\
+
+------------------------------------------------------------------------------
+
+               Total    Copied   Skipped  Mismatch    FAILED    Extras
+    Dirs :         1         0         0         0         0         0
+   Files :         0         0         0         0         0         0
+   Bytes :         0         0         0         0         0         0
+   Times :   0:00:00   0:00:00                       0:00:00   0:00:00
+   Ended : 28. maj 2018 21:36:44
+

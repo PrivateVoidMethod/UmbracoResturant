@@ -1,0 +1,49 @@
+﻿ 2018-06-03 00:18:51,210 [P1992/D2/T208] ERROR Umbraco.Web.Scheduling.BackgroundTaskRunner - [InstructionProcessing] Task has failed
+System.Data.SqlClient.SqlException (0x80131904): SHUTDOWN is in progress.
+Login failed for user 'KasperBurger'.
+Cannot continue the execution because the session is in the kill state.
+A severe error occurred on the current command.  The results, if any, should be discarded.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.TdsExecuteTransactionManagerRequest(Byte[] buffer, TransactionManagerRequestType request, String transactionName, TransactionManagerIsolationLevel isoLevel, Int32 timeout, SqlInternalTransaction transaction, TdsParserStateObject stateObj, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransactionYukon(TransactionRequest transactionRequest, String transactionName, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnection.BeginSqlTransaction(IsolationLevel iso, String transactionName, Boolean shouldReconnect)
+   at System.Data.SqlClient.SqlConnection.BeginTransaction(IsolationLevel iso, String transactionName)
+   at System.Data.SqlClient.SqlConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   at Umbraco.Core.Persistence.Database.OpenSharedConnection()
+   at Umbraco.Core.Persistence.Database.BeginTransaction(IsolationLevel isolationLevel)
+   at Umbraco.Core.Scoping.Scope.get_Database()
+   at Umbraco.Core.Sync.DatabaseServerMessenger.ProcessDatabaseInstructions()
+   at Umbraco.Core.Sync.DatabaseServerMessenger.Sync()
+   at Umbraco.Web.BatchedDatabaseServerMessenger.InstructionProcessing.PerformRun()
+   at Umbraco.Web.Scheduling.RecurringTaskBase.Run()
+   at Umbraco.Web.Scheduling.BackgroundTaskRunner`1.<RunAsync>d__40.MoveNext()
+ClientConnectionId:73ed7ed6-a054-409d-b84f-851dc5f7d109
+Error Number:6005,State:1,Class:14
+ 2018-06-03 00:18:52,132 [P1992/D2/T213] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Terminating
+ 2018-06-03 00:18:52,132 [P1992/D2/T213] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Waiting for tasks to complete
+ 2018-06-03 00:18:52,132 [P1992/D2/T213] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [InstructionProcessing] Terminating
+ 2018-06-03 00:18:52,132 [P1992/D2/T213] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [InstructionProcessing] Waiting for tasks to complete
+ 2018-06-03 00:18:52,132 [P1992/D2/T213] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [InstructionProcessing] Tasks completed, terminated
+ 2018-06-03 00:18:52,132 [P1992/D2/T213] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Terminating
+ 2018-06-03 00:18:52,132 [P1992/D2/T213] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Waiting for tasks to complete
+ 2018-06-03 00:18:52,132 [P1992/D2/T213] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Terminating
+ 2018-06-03 00:18:52,148 [P1992/D2/T213] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Waiting for tasks to complete
+ 2018-06-03 00:18:52,148 [P1992/D2/T213] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [HealthCheckNotifier] Terminating
+ 2018-06-03 00:18:52,148 [P1992/D2/T213] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [HealthCheckNotifier] Waiting for tasks to complete
+ 2018-06-03 00:18:52,148 [P1992/D2/T213] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [HealthCheckNotifier] Tasks completed, terminated
+ 2018-06-03 00:18:52,148 [P1992/D2/T213] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Terminating
+ 2018-06-03 00:18:52,148 [P1992/D2/T213] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Waiting for tasks to complete
+ 2018-06-03 00:18:52,148 [P1992/D2/T216] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Tasks completed, terminated
+ 2018-06-03 00:18:52,148 [P1992/D2/T247] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Tasks completed, terminated
+ 2018-06-03 00:18:52,148 [P1992/D2/T252] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Tasks completed, terminated
+ 2018-06-03 00:18:52,148 [P1992/D2/T213] INFO  Umbraco.Core.MainDom - Stopping...
+ 2018-06-03 00:18:52,148 [P1992/D2/T237] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Tasks completed, terminated
+ 2018-06-03 00:18:52,148 [P1992/D2/T213] INFO  Umbraco.Web.ExamineStartup - Examine shutting down
+ 2018-06-03 00:18:52,148 [P1992/D2/T213] INFO  Umbraco.Web.ExamineStartup - Complete (took 1ms)
+ 2018-06-03 00:18:52,148 [P1992/D2/T213] INFO  Umbraco.Core.MainDom - Released MainDom.
+ 2018-06-03 00:18:52,148 [P1992/D2/T213] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Terminating
+ 2018-06-03 00:18:52,148 [P1992/D2/T213] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Waiting for tasks to complete
+ 2018-06-03 00:18:52,148 [P1992/D2/T85] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Tasks completed, terminated
